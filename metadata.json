@@ -1,0 +1,8 @@
+{
+  "name": "MPBL Industrial ERP Production Tracker",
+  "description": "Enterprise manufacturing execution & shop-floor batch tracking system with stage workflow, machine monitoring, and AI logging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

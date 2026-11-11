@@ -1,0 +1,204 @@
+---
+name: Industrial ERP Tracker
+colors:
+  surface: '#f8f9ff'
+  surface-dim: '#cbdbf5'
+  surface-bright: '#f8f9ff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#eff4ff'
+  surface-container: '#e5eeff'
+  surface-container-high: '#dce9ff'
+  surface-container-highest: '#d3e4fe'
+  on-surface: '#0b1c30'
+  on-surface-variant: '#574142'
+  inverse-surface: '#213145'
+  inverse-on-surface: '#eaf1ff'
+  outline: '#8b7171'
+  outline-variant: '#debfbf'
+  surface-tint: '#a83541'
+  primary: '#570012'
+  on-primary: '#ffffff'
+  primary-container: '#7b1123'
+  on-primary-container: '#ff838a'
+  inverse-primary: '#ffb3b4'
+  secondary: '#006398'
+  on-secondary: '#ffffff'
+  secondary-container: '#5bb8fe'
+  on-secondary-container: '#00476e'
+  tertiary: '#401f00'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#603100'
+  on-tertiary-container: '#f68e26'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdada'
+  primary-fixed-dim: '#ffb3b4'
+  on-primary-fixed: '#40000b'
+  on-primary-fixed-variant: '#881c2b'
+  secondary-fixed: '#cce5ff'
+  secondary-fixed-dim: '#93ccff'
+  on-secondary-fixed: '#001d31'
+  on-secondary-fixed-variant: '#004b73'
+  tertiary-fixed: '#ffdcc3'
+  tertiary-fixed-dim: '#ffb77d'
+  on-tertiary-fixed: '#2f1500'
+  on-tertiary-fixed-variant: '#6e3900'
+  background: '#f8f9ff'
+  on-background: '#0b1c30'
+  surface-variant: '#d3e4fe'
+typography:
+  headline-lg:
+    fontFamily: Inter
+    fontSize: 30px
+    fontWeight: '700'
+    lineHeight: 38px
+  headline-lg-mobile:
+    fontFamily: Inter
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: 32px
+  headline-md:
+    fontFamily: Inter
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: Inter
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 18px
+  label-md:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+  mono-data:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 16px
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-mobile: 0.75rem
+  margin: 1.5rem
+  margin-mobile: 1rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 0.75rem
+  space-lg: 1rem
+  space-xl: 1.5rem
+---
+
+## Brand & Style
+
+This design system delivers a standardized enterprise industrial ERP aesthetic built for rigorous manufacturing execution and shop-floor tracking. Designed specifically for operational environments, the visual character emphasizes structural clarity, strict visual hierarchy, and immediate data scannability under varied lighting conditions.
+
+The brand persona is authoritative, precise, and utilitarian. It balances the dignity of enterprise operations with the rapid legibility required by floor supervisors, quality assurance inspectors, and planning managers. Visual ornamentation is eliminated in favor of information density, high tonal contrast, crisp borders, and purposeful stage-oriented color coding.
+
+## Colors
+
+The palette is anchored by a deep industrial maroon primary hue, establishing enterprise gravity across key actions, navigation bars, and primary workflow triggers. Crisp neutral surfaces (`#F8F9FA` to `#FFFFFF`) paired with structured light slate borders (`#E2E8F0`) ensure long-session legibility and high scannability.
+
+Manufacturing stage progression is communicated through dedicated semantic container pairings:
+- **Extrusion:** Surface `#E0F2FE` with Text/Icon `#0284C7`.
+- **Printing:** Surface `#EDE9FE` with Text/Icon `#7C3AED`.
+- **Bag Making:** Surface `#FEF3C7` with Text/Icon `#D97706`.
+- **Dispatch:** Surface `#DCFCE7` with Text/Icon `#16A34A`.
+- **Overdue / Alert:** Surface `#FFE4E6` with Text/Icon `#E11D48`.
+
+Neutral grays govern content rhythm: `#0F172A` for primary readouts and data headings, `#475569` for standard body labels, and `#64748B` for tertiary metadata.
+
+## Typography
+
+Typography leverages a unified Inter stack engineered for optical legibility and tabular numeric precision. Tabular figures (`tnum`) must be enforced across all tracking tables, job order counters, and timestamps to eliminate vertical layout jitter during live updates.
+
+Hierarchy is maintained strictly through font weight and line height rather than exaggerated scale differences. High-density cards favor `body-md` and `label-md` pairings to maximize the amount of trackable batch data per viewport without sacrificing touch legibility.
+
+## Layout & Spacing
+
+The layout model is anchored by a dense, 12-column responsive grid structured for manufacturing dashboards and shop-floor displays. 
+
+- **Desktop (1200px+):** 12-column fluid grid, 1.5rem margins, 1rem gutters. Side navigation remains pinned, exposing continuous workflow lane filters.
+- **Tablet (768px - 1199px):** 8-column layout with 1rem margins. Component cards wrap into dual-column grids to retain critical job batch metrics.
+- **Mobile (< 768px):** Single-column stacked cards, 1rem canvas margins, with horizontal scrolling reserved strictly for granular step-progress trackers.
+
+Spacing tokens prioritize compact data density. Component interiors leverage tight 8px (`space-sm`) and 12px (`space-md`) paddings, maximizing screen real estate while reserving a minimum 44px hit-box envelope for all physical touch controls.
+
+## Elevation & Depth
+
+To preserve legibility and rapid scan speed under ambient factory illumination, this design system avoids heavy drop shadows or blurry gradients. Depth is established through structural perimeter strokes and subtle surface-container tiers.
+
+- **Level 0 (Canvas Base):** Ground plane rendered in flat `#F8F9FA`.
+- **Level 1 (Batch Cards & Data Panels):** Solid `#FFFFFF` surface enclosed by a 1px solid `#E2E8F0` border.
+- **Level 2 (Active Rows & Overlays):** `#FFFFFF` surface backed by a disciplined low-spread shadow: `0 1px 3px rgba(15, 23, 42, 0.08)`.
+- **Level 3 (Modals & Action Drawers):** High-contrast containment elevated by `0 8px 16px -2px rgba(15, 23, 42, 0.12)`, framed by a distinct 1px border (`#CBD5E1`).
+
+## Shapes
+
+The geometric approach follows Soft roundedness (0.25rem / 4px base radius). This produces clean, disciplined corner radii that reinforce structural grid alignment while softening dense card clusters.
+
+- **Base Elements:** Buttons, text fields, and metrics cards use a standard 4px radius (`rounded`).
+- **Data Containers:** Modal sheets, large tables, and slide-over panels use an 8px radius (`rounded-lg`).
+- **Status Pills:** Production stage chips and priority tags utilize a full pill radius to visually distinguish state indicators from actionable rectangular cards.
+
+## Components
+
+### Buttons
+- **Primary:** Background `#7B1123`, text `#FFFFFF`, 4px border radius. Hover: `#600E1C`. Focus: 2px ring offset with `#7B1123`.
+- **Secondary:** Background `#FFFFFF`, 1px border `#E2E8F0`, text `#0F172A`. Hover: `#F1F5F9`.
+- **Destructive/Alert:** Background `#FFE4E6`, 1px border `#FECDD3`, text `#E11D48`.
+- Minimum target size: 40px height for desktop data grids, 44px on floor touchscreens.
+
+### Stage & Metric Pills
+- Fixed height: 24px (compact) or 28px (default), font `label-sm` to `label-md`.
+- Styled using dedicated paired tokens (e.g., Extrusion: `#E0F2FE` background with `#0284C7` bold text).
+- Overdue and critical alerts flash a distinct left-border marker (3px solid `#E11D48`).
+
+### Data Tables & Lists
+- Row height: 44px compact table density; alternate zebra striping optional using `#F8F9FA`.
+- Table header: `#F1F5F9` background, uppercase `label-sm` typography in `#475569`, bottom border 1px solid `#CBD5E1`.
+- Numeric columns (e.g., Target Qty, Actual Output, Variance) align right using tabular figures.
+
+### Form Inputs & Checkboxes
+- Text Inputs: Background `#FFFFFF`, 1px border `#CBD5E1`, 4px radius. Focus: border `#7B1123` with a subtle focus ring.
+- Checkboxes: 18x18px hit target with a 2px inner border `#94A3B8`. Checked state fills `#7B1123` with a solid white checkmark.
+
+### Batch & Job Production Cards
+- Contained within 1px solid `#E2E8F0` borders on `#FFFFFF`.
+- Header bar includes Order Number, Client Name, and Stage Chip.
+- Content body features dual-column key-value metrics (e.g., Target: 10,000 pcs; Produced: 8,450 pcs; Scrap: 1.2%).
+- Progress tracking bar: 6px track height with stage-matched solid fill.

@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #570012;
+    --color-primary-container: #7b1123;
+    --color-primary-hover: #600e1c;
+    --color-surface-base: #f8f9ff;
+    --color-border-slate: #e2e8f0;
+    --color-text-main: #0b1c30;
+    --color-text-muted: #475569;
+    --color-text-subtle: #64748b;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-surface-base);
+    color: var(--color-text-main);
+  }
+
+  /* Force tabular numbers for all numerical metrics & job IDs to prevent vertical jitter */
+  .font-mono-data, .tnum, .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-family: 'Inter', monospace;
+  }
+}
+
+/* Manufacturing Stage Pills & Container Colors */
+.stage-extrusion {
+  background-color: #E0F2FE;
+  color: #0284C7;
+  border: 1px solid #BAE6FD;
+}
+
+.stage-printing {
+  background-color: #EDE9FE;
+  color: #7C3AED;
+  border: 1px solid #DDD6FE;
+}
+
+.stage-bag-making {
+  background-color: #FEF3C7;
+  color: #D97706;
+  border: 1px solid #FDE68A;
+}
+
+.stage-dispatch {
+  background-color: #DCFCE7;
+  color: #16A34A;
+  border: 1px solid #BBF7D0;
+}
+
+.stage-overdue, .stage-alert {
+  background-color: #FFE4E6;
+  color: #E11D48;
+  border: 1px solid #FECDD3;
+  border-left: 3px solid #E11D48 !important;
+}
+
+.stage-completed {
+  background-color: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+/* Custom scrollbars for high-density tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles for Dispatch Slips & Batch Tags */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-area, #printable-area * {
+    visibility: visible;
+  }
+  #printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
